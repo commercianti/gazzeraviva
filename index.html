@@ -2,57 +2,330 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Gazzera Viva</title>
 
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial;
-      text-align: center;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
-      background: #f5f5f5;
+      padding: 0;
+      background-color: #FDF0E9; /* Il bianco caldo di sfondo dal tuo prototipo */
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
+    /* BARRA IN ALTO (Header) */
     header {
-      padding: 30px;
-      background: #2c3e50;
-      color: white;
+      background-color: #ffffff;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #f0e0d6;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      height: 60px;
     }
 
-    .btn {
-      display: block;
-      margin: 20px auto;
+    .hashtag {
+      font-weight: 800;
+      font-size: 13px;
+      color: #000000;
+    }
+    
+    .hashtag span {
+      color: #E26D34; /* Arancione per il cuoricino ideale o focus */
+    }
+
+    .associazione-logo {
+      text-align: right;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 1.2;
+      color: #000000;
+    }
+
+    /* CONTENUTO CENTRALE (Logo e Mascotte) */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       padding: 20px;
-      width: 80%;
-      max-width: 300px;
-      background: white;
-      border-radius: 12px;
-      font-size: 18px;
+      margin-top: 60px; /* Spazio per non coprire l'header fixed */
+      margin-bottom: 70px; /* Spazio per non coprire la navbar in basso */
+    }
+
+    /* Contenitore per l'immagine che hai creato */
+    .promo-container {
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+    }
+
+    .promo-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* BARRA DI NAVIGAZIONE IN BASSO (Menu a 3 Pulsanti) */
+    .navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #FDF0E9; /* Stesso colore dello sfondo per fondersi perfettamente */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .nav-item {
       text-decoration: none;
-      color: black;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      height: 100%;
+      transition: background 0.2s;
+    }
+
+    /* Effetto click leggero sul pulsante */
+    .nav-item:active {
+      background-color: rgba(226, 109, 52, 0.1);
+    }
+
+    .nav-item i {
+      font-size: 26px; /* Dimensione icone simile al tuo disegno */
+      margin-bottom: 5px;
+    }
+
+    .nav-item span {
+      font-size: 13px;
+      font-weight: 500;
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>Gazzera Viva</h1>
-  <p>Associazione Commercianti Artigiani Gazzera</p>
-</header>
+  <header>
+    <div class="hashtag">❤️ #farelaspesasottocasa</div>
+    <div class="associazione-logo">
+      Associazione<br>Commercianti<br>Artigiani<br>Gazzera
+    </div>
+  </header>
 
-<a class="btn" href="https://padlet.com/gazzeraviva/eventi-4qrhweyz8479wr2j">📅 Eventi</a>
-<a class="btn" href="https://padlet.com/gazzeraviva/comunity-eatejib5395ro1y0">👥 Community</a>
-<a class="btn" href="https://padlet.com/gazzeraviva/vetrina-prodotti-jb0svs3ohqs8ry04">🛍️ Vetrina</a>
+  <main>
+    <div class="promo-container">
+      <img src="<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Gazzera Vivi il Quartiere</title>
 
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js');
-  }
-</script>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FDF0E9; /* Il bianco caldo di sfondo dal tuo prototipo */
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* BARRA IN ALTO (Header) */
+    header {
+      background-color: #ffffff;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #f0e0d6;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      height: 60px;
+    }
+
+    .hashtag {
+      font-weight: 800;
+      font-size: 13px;
+      color: #000000;
+    }
+    
+    .hashtag span {
+      color: #E26D34; /* Arancione per il cuoricino ideale o focus */
+    }
+
+    .associazione-logo {
+      text-align: right;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 1.2;
+      color: #000000;
+    }
+
+    /* CONTENUTO CENTRALE (Logo e Mascotte) */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin-top: 60px; /* Spazio per non coprire l'header fixed */
+      margin-bottom: 70px; /* Spazio per non coprire la navbar in basso */
+    }
+
+    /* Contenitore per l'immagine che hai creato */
+    .promo-container {
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+    }
+
+    .promo-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* BARRA DI NAVIGAZIONE IN BASSO (Menu a 3 Pulsanti) */
+    .navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #FDF0E9; /* Stesso colore dello sfondo per fondersi perfettamente */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .nav-item {
+      text-decoration: none;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      height: 100%;
+      transition: background 0.2s;
+    }
+
+    /* Effetto click leggero sul pulsante */
+    .nav-item:active {
+      background-color: rgba(226, 109, 52, 0.1);
+    }
+
+    .nav-item i {
+      font-size: 26px; /* Dimensione icone simile al tuo disegno */
+      margin-bottom: 5px;
+    }
+
+    .nav-item span {
+      font-size: 13px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hashtag">❤️ #farelaspesasottocasa</div>
+    <div class="associazione-logo">
+      Associazione<br>Commercianti<br>Artigiani<br>Gazzera
+    </div>
+  </header>
+
+  <main>
+    <div class="promo-container">
+      <img src="https://drive.google.com/file/d/1D1qjrYM4cgt0aqd1Av0in-6atfaxLjrL/view?usp=drive_link" alt="Gazzera Viva" class="promo-image">
+    </div>
+  </main>
+
+  <nav class="navbar">
+    <a href="https://padlet.com/gazzeraviva/vetrina-prodotti-jb0svs3ohqs8ry04" class="nav-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Prodotti</span>
+    </a>
+    
+    <a href="https://padlet.com/gazzeraviva/eventi-4qrhweyz8479wr2j" class="nav-item">
+      <i class="fa-solid fa-music"></i>
+      <span>Eventi</span>
+    </a>
+    
+    <a href="https://padlet.com/gazzeraviva/comunity-eatejib5395ro1y0" class="nav-item">
+      <i class="fa-solid fa-users"></i>
+      <span>Comunity</span>
+    </a>
+  </nav>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+
+</body>
+</html>" alt="Gazzera Viva" class="promo-image">
+    </div>
+  </main>
+
+  <nav class="navbar">
+    <a href="https://padlet.com/gazzeraviva/vetrina-prodotti-jb0svs3ohqs8ry04" class="nav-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Prodotti</span>
+    </a>
+    
+    <a href="https://padlet.com/gazzeraviva/eventi-4qrhweyz8479wr2j" class="nav-item">
+      <i class="fa-solid fa-music"></i>
+      <span>Eventi</span>
+    </a>
+    
+    <a href="https://padlet.com/gazzeraviva/comunity-eatejib5395ro1y0" class="nav-item">
+      <i class="fa-solid fa-users"></i>
+      <span>Comunity</span>
+    </a>
+  </nav>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
 
 </body>
 </html>
