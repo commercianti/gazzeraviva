@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gazzera Insieme</title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      padding: 30px;
+      background: #2c3e50;
+      color: white;
+    }
+
+    .btn {
+      display: block;
+      margin: 20px auto;
+      padding: 20px;
+      width: 80%;
+      max-width: 300px;
+      background: white;
+      border-radius: 12px;
+      font-size: 18px;
+      text-decoration: none;
+      color: black;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Gazzera Insieme</h1>
+  <p>Associazione Commercianti e Artigiani</p>
+</header>
+
+<a class="btn" href="LINK_EVENTI">📅 Eventi</a>
+<a class="btn" href="LINK_COMMUNITY">👥 Community</a>
+<a class="btn" href="LINK_VETRINA">🛍️ Vetrina</a>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
+
+</body>
+</html>
