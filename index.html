@@ -68,16 +68,17 @@
 
     .promo-container {
       width: 100%;
-      max-width: 360px;
+      max-width: 500px; /* Abbiamo aumentato il limite da 360px a 500px per PC e schermi grandi */
       text-align: center;
+      padding: 10px;
     }
 
     .promo-image {
-      width: 100%;
-      height: auto;
-      max-height: 60vh;
-      border-radius: 12px;
-      outline: none;
+      width: 100%;       /* Spinge la foto a occupare tutta la larghezza disponibile */
+      height: auto;      /* Mantiene le proporzioni corrette senza schiacciare la mascotte */
+      max-height: 70vh;  /* Permette alla foto di essere più alta sullo schermo */
+      object-fit: contain;
+      border: none;
     }
 
     /* BARRA DI NAVIGAZIONE IN BASSO */
