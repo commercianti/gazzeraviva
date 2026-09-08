@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gazzera Viva - App</title>
     <style>
-        /* Reset e Stili di Base */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -14,7 +13,7 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #FAF2E7; /* Sfondo chiaro */
+            background-color: #FAF2E7;
             color: #1c5222;
             display: flex;
             justify-content: center;
@@ -22,7 +21,6 @@
             min-height: 100vh;
         }
 
-        /* Container dell'App */
         .app-container {
             width: 100%;
             max-width: 480px;
@@ -34,7 +32,6 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
-        /* 1. Header Superiore Arancione */
         header {
             background-color: #FF851B;
             padding: 10px 15px;
@@ -57,8 +54,9 @@
             line-height: 1.2;
         }
 
-        /* 2. Sezione Sostenitori */
+        /* PER ORA NASCOSTO: Sezione Sostenitori */
         .sostenitori-section {
+            display: none; /* Cambia in 'block' per farli riapparire */
             padding: 10px 15px;
         }
 
@@ -81,10 +79,9 @@
             display: block;
         }
 
-        /* 3. Sezione Mascotte e Testo */
         .hero-section {
             text-align: center;
-            padding: 15px;
+            padding: 20px 15px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -120,7 +117,6 @@
             font-weight: 500;
         }
 
-        /* 4. Menu Icone In Basso */
         .nav-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -141,11 +137,6 @@
             height: 55px;
             object-fit: contain;
             margin-bottom: 5px;
-            transition: transform 0.2s;
-        }
-
-        .nav-item img:hover {
-            transform: scale(1.08);
         }
 
         .nav-item span {
@@ -154,7 +145,6 @@
             color: #116b25;
         }
 
-        /* 5. Footer In Basso */
         footer {
             background-color: #FF851B;
             padding: 12px 15px;
@@ -180,22 +170,14 @@
             border-radius: 6px;
             display: block;
         }
-
-        a img {
-            transition: opacity 0.2s;
-        }
-        a img:hover {
-            opacity: 0.9;
-        }
     </style>
 </head>
 <body>
 
     <div class="app-container">
 
-        <!-- HEADER -->
         <header>
-            <a href="https://tuosito.it" target="_blank">
+            <a href="#">
                 <img src="logo.jpg" alt="Gazzera Viva Logo" class="logo-img">
             </a>
             <div class="header-text">
@@ -206,28 +188,24 @@
             </div>
         </header>
 
-        <!-- SEZIONE SOSTENITORI NASCOSTA (INIZIO) -->
-        <!--
+        <!-- Sezione Sostenitori (Nascosta dal CSS) -->
         <section class="sostenitori-section">
             <div class="sostenitori-title">Sostenitori</div>
             <div class="sostenitori-grid">
-                <a href="https://link-sostenitore1.com" class="sostenitore-card">
+                <a href="#" class="sostenitore-card">
                     <img src="sostenitore1.jpg" alt="Sostenitore 1">
                 </a>
-                <a href="https://link-sostenitore2.com" class="sostenitore-card">
+                <a href="#" class="sostenitore-card">
                     <img src="sostenitore2.jpg" alt="Sostenitore 2">
                 </a>
-                <a href="https://link-sostenitore3.com" class="sostenitore-card">
+                <a href="#" class="sostenitore-card">
                     <img src="sostenitore3.jpg" alt="Sostenitore 3">
                 </a>
             </div>
         </section>
-        -->
-        <!-- SEZIONE SOSTENITORI NASCOSTA (FINE) -->
 
-        <!-- SEZIONE CENTRALE / MASCOTTE -->
         <section class="hero-section">
-            <a href="https://link-mascotte.com">
+            <a href="#">
                 <img src="mascot asso.jpg" alt="Mascotte Asso" class="mascotte-img">
             </a>
             <div class="hero-title-small">Ciao sono</div>
@@ -235,7 +213,6 @@
             <div class="hero-subtitle">Mascotte dell'associazione</div>
         </section>
 
-        <!-- MENU BOTTONI ICONE -->
         <nav class="nav-grid">
             <a href="prodotti.html" class="nav-item">
                 <img src="prodotti.jpg" alt="Prodotti">
@@ -255,239 +232,9 @@
             </a>
         </nav>
 
-        <!-- FOOTER INFO E SOCIAL -->
         <footer>
             <a href="https://wa.me/393518731413" target="_blank" class="info-btn">
                 <img src="telefono.jpg" alt="INFO 3518731413">
-            </a>
-            <div class="social-icons">
-                <a href="https://wa.me/393518731413" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
-                </a>
-                <a href="https://facebook.com" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook">
-                </a>
-                <a href="https://telegram.org" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram">
-                </a>
-            </div>
-        </footer>
-
-    </div>
-
-</body>
-</html>
-        /* 1. Header Superiore Arancione */
-        header {
-            background-color: #FF851B; /* Arancione */
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-img {
-            max-height: 55px;
-            width: auto;
-            display: block;
-        }
-
-        .header-text {
-            color: #ffffff;
-            font-size: 13px;
-            font-weight: bold;
-            text-align: right;
-            line-height: 1.2;
-        }
-
-        /* 2. Sezione Sostenitori */
-        .sostenitori-section {
-            padding: 10px 15px;
-        }
-
-        .sostenitori-title {
-            font-size: 12px;
-            color: #555;
-            margin-bottom: 5px;
-        }
-
-        .sostenitori-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-        }
-
-        .sostenitore-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            display: block;
-        }
-
-        /* 3. Sezione Mascotte e Testo */
-        .hero-section {
-            text-align: center;
-            padding: 15px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mascotte-img {
-            width: 80%;
-            max-width: 280px;
-            height: auto;
-            margin-bottom: 15px;
-        }
-
-        .hero-title-small {
-            font-size: 22px;
-            color: #1c5222;
-            margin-bottom: 2px;
-        }
-
-        .hero-title-main {
-            font-size: 48px;
-            font-weight: 900;
-            color: #116b25;
-            letter-spacing: 1px;
-            line-height: 1;
-            margin-bottom: 5px;
-        }
-
-        .hero-subtitle {
-            font-size: 20px;
-            color: #1c5222;
-            font-weight: 500;
-        }
-
-        /* 4. Menu Icone In Basso */
-        .nav-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .nav-item img {
-            width: 55px;
-            height: 55px;
-            object-fit: contain;
-            margin-bottom: 5px;
-            transition: transform 0.2s;
-        }
-
-        .nav-item img:hover {
-            transform: scale(1.08);
-        }
-
-        .nav-item span {
-            font-size: 14px;
-            font-weight: bold;
-            color: #116b25;
-        }
-
-        /* 5. Footer In Basso con Contatti e Social */
-        footer {
-            background-color: #FF851B; /* Arancione */
-            padding: 12px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .info-btn img {
-            height: 45px;
-            width: auto;
-            display: block;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 6px;
-        }
-
-        .social-icons a img {
-            width: 36px;
-            height: 36px;
-            border-radius: 6px;
-            display: block;
-        }
-
-        /* Effetto hover generale per tutti i link-immagine */
-        a img {
-            transition: opacity 0.2s;
-        }
-        a img:hover {
-            opacity: 0.9;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="app-container">
-
-        <!-- HEADER -->
-        <header>
-            <!a href="https://tuosito.it" target="_blank">
-                <img src="logo.jpg" alt="Gazzera Viva Logo" class="logo-img">
-            </a>
-            <div class="header-text">
-                Associazione<br>j
-                Commercianti<br>
-                Artigiani<br>
-                Gazzera
-            </div>
-        </header>
-
-        -->
-        <!-- SEZIONE CENTRALE / MASCOTTE -->
-        <section class="hero-section">
-            <a href="https://link-mascotte.com">
-                <img src="mascot asso.jpg" alt="Mascotte Asso" class="mascotte-img">
-            </a>
-            <div class="hero-title-small">Ciao sono</div>
-            <div class="hero-title-main">ASSO</div>
-            <div class="hero-subtitle">Mascotte dell'associazione</div>
-        </section>
-
-        <!-- MENU BOTTONI ICONE -->
-        <nav class="nav-grid">
-            <a href="prodotti.html" class="nav-item">
-                <img src="prodotti.jpg" alt="Prodotti">
-                <span>Prodotti</span>
-            </a>
-            <a href="negozi.html" class="nav-item">
-                <img src="negozi.jpg" alt="Negozi">
-                <span>Negozi</span>
-            </a>
-            <a href="eventi.html" class="nav-item">
-                <img src="eventi.jpg" alt="Eventi">
-                <span>Eventi</span>
-            </a>
-            <a href="community.html" class="nav-item">
-                <img src="comunity.jpg" alt="Community">
-                <span>Community</span>
-            </a>
-        </nav>
-
-        <!-- FOOTER INFO E SOCIAL -->
-        <footer>
-            <a href="https://wa.me/393518731413" target="_blank" class="info-btn">
-                <img src="Telefono.Jpg" alt="INFO 3518731413">
             </a>
             <div class="social-icons">
                 <a href="https://wa.me/393518731413" target="_blank">
