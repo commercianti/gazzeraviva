@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Gazzera Viva - App</title>
     <style>
         * {
@@ -11,44 +11,52 @@
             padding: 0;
         }
 
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Elimina lo scroll della pagina */
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #FAF2E7;
             color: #1c5222;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
+            align-items: center;
         }
 
         .app-container {
             width: 100%;
             max-width: 480px;
+            height: 100vh;
+            height: 100dvh; /* Blocca l'altezza all'area visibile dello schermo */
             background-color: #FDF0E0;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            justify-content: space-between;
             position: relative;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
         header {
             background-color: #FF851B;
-            padding: 10px 15px;
+            padding: 8px 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-shrink: 0;
         }
 
         .logo-img {
-            max-height: 55px;
+            max-height: 48px;
             width: auto;
             display: block;
         }
 
         .header-text {
             color: #ffffff;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
             text-align: right;
             line-height: 1.2;
@@ -58,6 +66,7 @@
         .sostenitori-section {
             display: none; /* Cambia in 'block' per farli riapparire */
             padding: 10px 15px;
+            flex-shrink: 0;
         }
 
         .sostenitori-title {
@@ -81,38 +90,46 @@
 
         .hero-section {
             text-align: center;
-            padding: 20px 15px;
-            flex-grow: 1;
+            padding: 5px 15px;
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            min-height: 0; /* Permette all'immagine di ridimensionarsi sui telefoni piccoli */
+        }
+
+        .mascotte-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 0;
         }
 
         .mascotte-img {
-            width: 80%;
-            max-width: 280px;
-            height: auto;
-            margin-bottom: 15px;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         .hero-title-small {
-            font-size: 22px;
+            font-size: 18px;
             color: #1c5222;
-            margin-bottom: 2px;
+            margin-top: 4px;
         }
 
         .hero-title-main {
-            font-size: 48px;
+            font-size: 38px;
             font-weight: 900;
             color: #116b25;
             letter-spacing: 1px;
             line-height: 1;
-            margin-bottom: 5px;
         }
 
         .hero-subtitle {
-            font-size: 20px;
+            font-size: 16px;
             color: #1c5222;
             font-weight: 500;
         }
@@ -120,9 +137,10 @@
         .nav-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            padding: 15px;
+            gap: 5px;
+            padding: 10px 10px;
             text-align: center;
+            flex-shrink: 0;
         }
 
         .nav-item {
@@ -133,28 +151,29 @@
         }
 
         .nav-item img {
-            width: 55px;
-            height: 55px;
+            width: 45px;
+            height: 45px;
             object-fit: contain;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .nav-item span {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: bold;
             color: #116b25;
         }
 
         footer {
             background-color: #FF851B;
-            padding: 12px 15px;
+            padding: 8px 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-shrink: 0;
         }
 
         .info-btn img {
-            height: 45px;
+            height: 38px;
             width: auto;
             display: block;
         }
@@ -165,8 +184,8 @@
         }
 
         .social-icons a img {
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             border-radius: 6px;
             display: block;
         }
@@ -205,9 +224,11 @@
         </section>
 
         <section class="hero-section">
-            <a href="#">
-                <img src="mascot asso.jpg" alt="Mascotte Asso" class="mascotte-img">
-            </a>
+            <div class="mascotte-wrapper">
+                <a href="#" style="display: flex; justify-content: center; height: 100%;">
+                    <img src="mascot asso.jpg" alt="Mascotte Asso" class="mascotte-img">
+                </a>
+            </div>
             <div class="hero-title-small">Ciao sono</div>
             <div class="hero-title-main">ASSO</div>
             <div class="hero-subtitle">Mascotte dell'associazione</div>
